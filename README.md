@@ -4,19 +4,8 @@ A simple YAML configuration loader in Python.
 
 ## Installation
 
-You can install the package using `pip` with the following command:
+You can install the config.py
 
-```bash
-pip install yml-configuration-py
-```
-
-Or, you can clone the GitHub repository and install the package with the following commands:
-
-```
-git clone https://github.com/D1N0-S1D1/YML-Configuration-Py.git
-cd YML-Configuration-Py
-pip install .
-```
 
 ## Usage
 You can use the Config class to load a YAML configuration file:
