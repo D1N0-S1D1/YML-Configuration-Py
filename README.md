@@ -8,12 +8,14 @@ You can install the yml_configuration.p
 
 
 ## Usage
+You should create file name_file.yml or run yml_configuration.py
+
 You can use the Config class to load a YAML configuration file:
 
 ```
 from yml_configuration import Config
 
-config = Config('config.yml')
+config = Config('name_file.yml')
 
 # Access a value from the configuration file
 value = config.get('section', 'key')
@@ -38,6 +40,6 @@ You can create the configuration file manually, or use the 'create_config' funct
 ```
 from yml_configuration import Config
 
-config = Config('config.yml')
+config = Config('name_file.yml')
 config.create_config()
 ```
