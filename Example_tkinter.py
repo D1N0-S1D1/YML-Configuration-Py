@@ -1,5 +1,5 @@
 import tkinter as tk
-from config import Config
+from yml_configuration import Config
 from tkinter import messagebox
 
 class TkinterApp:
