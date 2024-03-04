@@ -1,12 +1,22 @@
 import os
-print(os.getcwd())
+
 import yaml
+
 
 class Config:
     def __init__(self, filename):
-        with open("config.yml", 'r', encoding='utf-8') as file:
+        if not os.path.exists(filename):
+            self.create_config()
+        with open(filename, 'r', encoding='utf-8') as file:
             self.config = yaml.safe_load(file)
             print(f"Config dictionary: {self.config}")
+
+    def create_config(self):
+        print("# By D1N0\n# YML Config in Python")
+        self.config = {}
+        with open("config.yml", 'w', encoding='utf-8') as file:
+            yaml.dump(self.config, file)
+        print("Configuration file was created")
 
     def parse_yaml(self, yaml_string):
         in_quotes = False
@@ -48,3 +58,6 @@ class Config:
             return self.config[section][key]
         else:
             raise KeyError(f"Key '{key}' not found in section '{section}'")
+
+if __name__ == '__main__':
+    config = Config('config.yml')
