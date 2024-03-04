@@ -4,7 +4,7 @@ A simple YAML configuration loader in Python.
 
 ## Installation
 
-You can install the config.py
+You can install the yml_configuration.p
 
 
 ## Usage
