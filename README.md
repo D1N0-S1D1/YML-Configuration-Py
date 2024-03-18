@@ -4,7 +4,7 @@ A simple YAML configuration loader in Python.
 
 ## Installation
 
-You can install the yml_configuration.p
+You can install the yml_configuration.py
 
 
 ## Usage
@@ -18,7 +18,7 @@ from yml_configuration import Config
 config = Config('name_file.yml')
 
 # Access a value from the configuration file
-value = config.get('section', 'key')
+value = config.get('section.key1.key2')
 ```
 
 ## Configuration File
@@ -26,13 +26,16 @@ The configuration file should be a YAML file with the following structure:
 
 ```
 section:
-  key: value
+  key1: 
+    key2:
+      value
 ```
 For example:
 
 ```
 Messages:
-  Error: 'О ні! Ви не можете ввійти як адміністратор!'
+  Errors: 
+    Admin-Error:'О ні! Ви не можете ввійти як адміністратор!'
 ```
 
 You can create the configuration file manually, or use the 'create_config' function to create it:
